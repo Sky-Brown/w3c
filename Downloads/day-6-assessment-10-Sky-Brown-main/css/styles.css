@@ -1,0 +1,139 @@
+/* ***************** utilities & containers ***************** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.container {
+    max-width: 1528px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+/* ***************** header & footer ***************** */
+header {
+    background-color: #0e4c6d;
+}
+
+header .container {
+    padding: 24px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+footer {
+    background-color: #0e4c6d;
+    color: #ffffff;
+}
+
+footer .container {
+    padding: 40px 24px;
+}
+
+footer p {
+    margin-bottom: 16px;
+}
+
+footer cite {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* ***************** global typography ***************** */
+
+h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* ***************** main content ***************** */
+
+.team {
+    margin-bottom: 96px;
+}
+
+.team .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px; 
+}
+
+.team .flex-container > section {
+    width: calc(50% - 24px);
+    background-color: #d1d1d1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    min-height: 260px; 
+}
+
+.team img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 32px;
+    flex-shrink: 0;
+}
+
+.team .flex-container > section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.plans {
+    margin-bottom: 96px;
+}
+
+.plans .flex-container {
+    display: flex;
+    gap: 48px;
+}
+
+.plan {
+    background-color: #d1d1d1;
+    padding: 48px 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+}
+
+.plan section {
+    margin-top: 24px;
+}
+
+.plan ul {
+    margin-left: 24px;
+    line-height: 1.6;
+}
+
+.plan p {
+    margin-top: auto;
+    font-weight: bold;
+    color: #0e4c6d;
+}
+
+
+

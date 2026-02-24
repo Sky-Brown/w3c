@@ -1,0 +1,415 @@
+/* ====== RESET ====== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  background: #eef2f5; /* light grey frame background */
+}
+
+img{ display:block; max-width:100%; }
+a{ color: inherit; text-decoration:none; }
+
+/* ====== VARIABLES (easy to tweak if needed) ====== */
+:root{
+  --blue: #0b5f75;
+  --blue-dark: #083f4d;
+  --accent: #b53b55;
+  --border: #e6e6e6;
+  --card-border: #e7e7e7;
+
+  --container-max: 1200px;
+}
+
+/* ====== CONTAINER ====== */
+.container{
+  width: min(92%, var(--container-max));
+  margin-inline: auto;
+}
+
+/* ====== HEADER (matches screenshot spacing) ====== */
+.site-header{
+  background:#fff;
+  border-bottom: 2px solid var(--border);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap: 2rem;
+  padding: 18px 0; /* screenshot-ish header height */
+}
+
+.brand__logo{
+  width: 56px;
+  height: auto;
+}
+
+.site-nav{
+  flex: 1 1 auto;
+  display:flex;
+  justify-content:center;
+  gap: 30px;
+}
+
+.site-nav__link{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.site-nav__link:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 700;
+  border: 2px solid transparent;
+}
+
+.btn--sign-in{
+  background: var(--accent);
+  color:#fff;
+  padding: 12px 20px;
+}
+
+.btn--sign-in:hover{
+  filter: brightness(0.95);
+}
+
+/* ====== HERO (big blue band) ====== */
+.hero{
+  background: var(--blue);
+  color:#fff;
+  padding: 58px 0 62px;
+}
+
+.hero-inner{
+  display:flex;
+  align-items:flex-start;
+  gap: 56px;
+}
+
+.hero-left{
+  flex: 0 1 320px;
+}
+
+.hero-right{
+  flex: 1 1 640px;
+  padding-top: 10px;
+}
+
+.hero-title{
+  margin: 0 0 22px;
+  font-size: 72px;      /* matches huge "Meeple Mind Games" */
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.btn--hero{
+  border-color: rgba(255,255,255,0.55);
+  color:#fff;
+  background: transparent;
+  padding: 10px 18px;
+}
+
+.btn--hero:hover{
+  border-color:#fff;
+}
+
+.hero-copy{
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.35;
+  max-width: 700px;
+}
+
+.hero-copy__strong{
+  font-weight: 800;
+}
+
+/* ====== MAIN 2-COLUMN AREA ====== */
+.page{
+  padding: 42px 0 60px;
+}
+
+.main-grid{
+  display:flex;
+  gap: 34px;
+  align-items:flex-start;
+}
+
+.left-col{
+  flex: 1 1 720px;
+  display:flex;
+  flex-direction:column;
+  gap: 30px;
+}
+
+.right-col{
+  flex: 0 0 320px; /* sidebar width matches screenshot */
+}
+
+/* ====== CARDS ====== */
+.card{
+  background:#fff;
+  border: 2px solid var(--card-border);
+}
+
+.card__body{
+  padding: 22px 24px;
+}
+
+.card__title{
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.card__text{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.card--media{
+  overflow:hidden;
+}
+
+.card__img{
+  width: 100%;
+  height: 210px;         /* forces the same “banner” crop */
+  object-fit: cover;     /* key for matching the screenshot crop */
+}
+
+/* upcoming card split row */
+.split{
+  display:flex;
+  gap: 26px;
+  align-items:flex-start;
+}
+
+.split__left{
+  flex: 1 1 auto;
+  min-width: 260px;
+}
+
+.split__right{
+  flex: 0 0 auto;
+  padding-top: 28px; /* positions “Register Now” like screenshot */
+}
+
+.accent-link{
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.accent-link:hover{
+  filter: brightness(0.9);
+}
+
+/* ====== SIDEBAR LIST ====== */
+.games{
+  list-style:none;
+  padding: 0;
+  margin: 18px 0 0;
+  display:flex;
+  flex-direction:column;
+  gap: 26px;
+}
+
+.game{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap: 10px;
+}
+
+.game__img{
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.game__name{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ====== FOOTER ====== */
+.site-footer{
+  background: var(--blue-dark);
+  color:#fff;
+  padding: 26px 0;
+}
+
+.footer-inner{
+  display:flex;
+  gap: 40px;
+  align-items:flex-start;
+}
+
+.footer-inner p{
+  margin: 0;
+  flex: 1 1 50%;
+  font-size: 12.5px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* ==========================================================
+   TABLET (matches your tablet screenshot)
+   - still 2 columns
+   - smaller hero type + tighter spacing
+   ========================================================== */
+@media (max-width: 48rem){ /* 768px */
+  .container{ width: min(94%, 980px); }
+
+  .hero{
+    padding: 44px 0 48px;
+  }
+
+  .hero-inner{
+    gap: 34px;
+  }
+
+  .hero-title{
+    font-size: 58px;
+  }
+
+  .hero-copy{
+    font-size: 22px;
+    max-width: 520px;
+  }
+
+  .main-grid{
+    gap: 22px;
+  }
+
+  .right-col{
+    flex: 0 0 260px;
+  }
+
+  .card__img{
+    height: 190px;
+  }
+
+  .card__title{
+    font-size: 24px;
+  }
+
+  .split__right{
+    padding-top: 18px;
+  }
+
+  .game__img{
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* ==========================================================
+   MOBILE (matches your phone screenshot)
+   - hero becomes stacked
+   - content + sidebar become 2 columns inside the page (like your phone screenshot)
+   - then very small screens can stack if needed
+   ========================================================== */
+@media (max-width: 30rem){ /* 480px */
+  .header-inner{
+    gap: 14px;
+    align-items:flex-start;
+  }
+
+  .site-nav{
+    justify-content:flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  /* hero stacks */
+  .hero-inner{
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .hero-left{ flex: 1 1 auto; }
+  .hero-right{ padding-top: 0; }
+
+  .hero-title{
+    font-size: 64px; /* big on mobile in your screenshot */
+  }
+
+  .hero-copy{
+    font-size: 26px;
+    max-width: 24rem;
+  }
+
+  /* phone screenshot still shows left content and right sidebar side-by-side */
+  .main-grid{
+    gap: 18px;
+  }
+
+  .left-col{
+    flex: 1 1 62%;
+  }
+
+  .right-col{
+    flex: 0 0 34%;
+  }
+
+  .card__img{
+    height: 120px; /* phone screenshot shows shorter image banner */
+  }
+
+  .card__body{
+    padding: 18px;
+  }
+
+  .card__title{
+    font-size: 22px;
+  }
+
+  .split{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .split__right{
+    padding-top: 0;
+  }
+
+  .games{
+    gap: 18px;
+  }
+
+  .game__img{
+    width: 90px;
+    height: 90px;
+  }
+
+  .footer-inner{
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+/* safety: if screen becomes ultra tiny, allow stacking to prevent overflow */
+@media (max-width: 22rem){
+  .main-grid{ flex-direction: column; }
+  .right-col{ flex: 1 1 auto; }
+}
